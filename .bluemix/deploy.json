@@ -239,6 +239,14 @@
                     "$ref": "#/messages/deploy.clusternsDescription"
                 }
             }]
+        },
+        {	
+            "type": "text",	
+            "readonly": false,	
+            "title": {	
+                "$ref": "#/messages/deploy.terraformDirectory"
+            },
+            "key": "tf-dir"
         }
     ]
 }
