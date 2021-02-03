@@ -92,9 +92,16 @@
             },
             "type": "string",
             "pattern": "\\S"
-        }
+        },
+        "tf-dir": {
+            "description": {
+                "$ref": "#/messages/deploy.terraformDirectory"
+            },
+            "type": "string",
+            "pattern": "\\S"
+        }        
     },
-    "required": ["app-name", "api-key", "registry-region", "registry-namespace", "prod-region", "prod-resource-group", "prod-cluster-name", "prod-cluster-namespace"],
+    "required": ["app-name", "api-key", "registry-region", "registry-namespace", "prod-region", "prod-resource-group", "prod-cluster-name", "prod-cluster-namespace","tf-dir"],
     "form": [{
             "type": "validator",
             "url": "/devops/validator/validator-v1.html"
