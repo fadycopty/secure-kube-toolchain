@@ -104,6 +104,7 @@ services:
           TEKTON_CATALOG_REPO: tekton-catalog-repo
           REGISTRY_REGION_ID: "{{form.pipeline.parameters.registry-region}}"
           REGISTRY_NAMESPACE: "{{form.pipeline.parameters.registry-namespace}}"
+          TF_DIR: '{{form.pipeline.parameters.tf-dir}}'
           GIT_COMMIT_EVENT_LISTENER_NAME: >
             if ( $env.source_provider === 'githubconsolidated' ) {
               'github-pr-listener';
@@ -148,6 +149,7 @@ services:
           PROD_RESOURCE_GROUP: "{{form.pipeline.parameters.prod-resource-group}}"
           PROD_CLUSTER_NAME: "{{form.pipeline.parameters.prod-cluster-name}}"
           PROD_CLUSTER_NAMESPACE: "{{form.pipeline.parameters.prod-cluster-namespace}}"
+          TF_DIR: '{{form.pipeline.parameters.tf-dir}}'
           APP_REPO_FULL: >
             if ( $env.source_provider === 'githubconsolidated' ) {
               "https://github.com/{{services.repo.parameters.owner_id}}/{{services.repo.parameters.repo_name}}";
