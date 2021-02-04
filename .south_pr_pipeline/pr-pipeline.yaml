@@ -5,7 +5,6 @@ metadata:
   name: pr-pipeline
 spec:
   params:
-
     - name: branch
       description: branch
     - name: revision
@@ -330,7 +329,7 @@ spec:
         - name: repository
           value:  $(tasks.extract-repository-url.results.extracted-value)
         - name: revision
-          value: $(params.commit-id)
+          value: $(params.branch)
         - name: scm-type
           value: $(params.scm-type)
         - name: project-id
