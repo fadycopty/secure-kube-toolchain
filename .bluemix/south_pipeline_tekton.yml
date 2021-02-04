@@ -54,7 +54,10 @@ triggers:
   - type: manual
     name: manual-run
     eventListener: manual-run
-    properties: []
+    properties:
+      - name: tf-dir
+        value: ${TF_DIR}
+        type: text
 properties:
   - type: secure
     name: toolchain-apikey
