@@ -36,6 +36,10 @@ triggers:
     events:
       pull_request: true
     eventListener: ${GIT_COMMIT_EVENT_LISTENER_NAME}
+    properties:
+      - name: tf-dir
+        value: ${TF_DIR}
+        type: text
 properties:
   - name: apikey
     value: ${API_KEY}
