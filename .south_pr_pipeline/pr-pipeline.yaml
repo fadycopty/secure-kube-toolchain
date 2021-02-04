@@ -290,6 +290,10 @@ spec:
           value: $(tasks.extract-repository-url.results.extracted-value)
 
     - name: cra-terraform-scan-status-pending
+      when:
+      - input: "$(params.tf-dir)"
+        operator: notin
+        values: [""]    
       runAfter:
         - git-clone
       taskRef:
@@ -344,7 +348,7 @@ spec:
           
     - name: cra-terraform-scan-status-finished
       runAfter:
-        - cra-bom
+        - cra-terraform-scan
       taskRef:
         name: git-set-commit-status
       workspaces:
