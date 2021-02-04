@@ -22,7 +22,7 @@ spec:
     - name: scm-type
     - name: project-id
       default: ""
-        - name: tf-dir
+    - name: tf-dir
       description: the directory where the terraform main entry file is found
       default: ""
     - name: policy-config-json
