@@ -376,14 +376,14 @@ spec:
         name: cra-terraform-scan
       workspaces:
         - name: artifacts
-          workspace: artifacts
+          workspace: pipeline-ws
         - name: secrets
-          workspace: artifacts
+          workspace: pipeline-ws
       params:
         - name: repository
           value:  $(tasks.extract-repository-url.results.extracted-value)
         - name: revision
-          value: $(params.commit-id)
+          value: $(params.revision)
         - name: scm-type
           value: $(params.scm-type)
         - name: project-id
