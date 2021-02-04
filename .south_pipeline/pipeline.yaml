@@ -371,7 +371,7 @@ spec:
         operator: notin
         values: [""]
       runAfter:
-        - cra-fetch-repo
+        - git-clone
       taskRef:
         name: cra-terraform-scan
       workspaces:
