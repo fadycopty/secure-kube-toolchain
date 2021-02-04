@@ -22,6 +22,15 @@ spec:
     - name: scm-type
     - name: project-id
       default: ""
+        - name: tf-dir
+      description: the directory where the terraform main entry file is found
+      default: ""
+    - name: policy-config-json
+      description: Configure policies to control thresholds
+      default: ""
+    - name: tf-var-file
+      description: (optional) terraform var-file
+      default: ""
   workspaces:
     - name: pipeline-ws
 
